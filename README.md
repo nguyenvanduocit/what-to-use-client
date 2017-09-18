@@ -1,8 +1,8 @@
 # vue-curated-client
 
-> Curated vue packages.
+> What packages to use.
 
-Consumes [vue-curated](https://github.com/nguyenvanduocit/what-to-use/blob/master/PACKAGES.md) and needs [vue-curated-server](https://github.com/nguyenvanduocit/what-to-use-server).
+Consumes [what-to-use](https://github.com/nguyenvanduocit/what-to-use/blob/master/PACKAGES.md) and needs [what-to-use-server](https://github.com/nguyenvanduocit/what-to-use-server).
 
 ## Build Setup
 
