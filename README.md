@@ -1,4 +1,4 @@
-# vue-curated-client
+# what-to-use-client
 
 > What packages to use.
 
