@@ -16,9 +16,6 @@
             <span class="module-label">{{ module.label }}</span>
 
             <span class="badges">
-              <span class="badge-group vue-versions">
-                <span class="badge vue-version" v-for="version of module.vue">{{ version }}</span>
-              </span>
 
               <span class="badge module-badge" v-if="module.badge" :class="module.badge">{{ module.badge }}</span>
 

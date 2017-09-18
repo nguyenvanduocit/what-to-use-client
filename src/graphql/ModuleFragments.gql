@@ -3,7 +3,6 @@
 fragment Module on Module {
   ...Entity
   url
-  vue
   links {
     url
     label

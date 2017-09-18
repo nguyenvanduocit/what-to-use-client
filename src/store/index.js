@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { apolloClient } from 'api/apollo'
 
-import RELEASES_QUERY from 'graphql/VueReleases.gql'
 import CATEGORIES_QUERY from 'graphql/ModuleCategories.gql'
 
 Vue.use(Vuex)
@@ -13,7 +12,6 @@ const store = new Vuex.Store({
     categories: [],
     categoriesReady: false,
     releaseId: null,
-    releases: [],
     releasesReady: false,
   },
 
@@ -50,19 +48,8 @@ const store = new Vuex.Store({
   actions: {
     'init' ({ dispatch }) {
       return Promise.all([
-        dispatch('fetch_releases'),
         dispatch('fetch_categories'),
       ])
-    },
-
-    'fetch_releases' ({ commit }) {
-      apolloClient.query({
-        query: RELEASES_QUERY,
-      }).then(result => {
-        const releases = result.data.vue_releases
-        commit('set_release', releases[0].id)
-        commit('set_releases', releases)
-      })
     },
 
     'fetch_categories' ({ commit }) {

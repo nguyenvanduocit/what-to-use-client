@@ -5,7 +5,6 @@
         <router-link :to="{ name: 'home' }"><img src="~assets/logo.png" width="32" height="32" /></router-link>
       </div>
 
-      <releases class="filter"></releases>
       <categories class="filter"></categories>
     </div>
 
@@ -63,7 +62,6 @@ import { search } from 'utils/search'
 
 import Module from './ModuleListItem.vue'
 import Categories from './Categories.vue'
-import Releases from './Releases.vue'
 
 import MODULES_QUERY from 'graphql/Modules.gql'
 
@@ -77,7 +75,6 @@ export default {
   components: {
     Module,
     Categories,
-    Releases,
   },
 
   data () {
@@ -91,13 +88,6 @@ export default {
   apollo: {
     modules: {
       query: MODULES_QUERY,
-      variables () {
-        const release = this.releases.length === 0 || this.release === this.releases[0].id ?
-          '_LATEST_' : this.release
-        return {
-          release,
-        }
-      },
       update: data => data ? data.modules.slice().sort((a, b) => a.label < b.label ? -1 : 1) : [],
       loadingKey: 'apolloLoading',
     },
