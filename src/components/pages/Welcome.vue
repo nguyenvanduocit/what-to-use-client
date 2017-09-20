@@ -1,17 +1,16 @@
 <template>
   <div class="welcome-page page-content">
     <h1>Welcome</h1>
-    <h2>Find the best packages for your Vue app!</h2>
+    <h2>Find the best packages for your project!</h2>
     <section class="image preview">
       <img src="~assets/preview.svg" width="500" height="300" />
     </section>
     <section class="info">
-      Browse a curated list of high-quality <a href="https://vuejs.org/">Vue.js</a> packages that will help you build awesome apps.
+      Browse a curated list of high-quality packages that will help you build awesome apps.
     </section>
     <section class="actions">
-      <a href="https://github.com/vuejs/awesome-vue"><i class="material-icons">star</i> Browse more packages</a>
-      <a href="https://github.com/vuejs/vue-curated"><i class="material-icons">assistant</i> Submit a package</a>
-      <a href="https://github.com/vuejs/vue-curated-client"><i class="material-icons">edit</i> Contribute to the app</a>
+      <a href="https://github.com/nguyenvanduocit/what-to-use"><i class="material-icons">assistant</i> Submit a package</a>
+      <a href="https://github.com/nguyenvanduocit/what-to-use-client"><i class="material-icons">edit</i> Contribute to the app</a>
     </section>
   </div>
 </template>
